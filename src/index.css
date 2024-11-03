@@ -1,0 +1,103 @@
+/* src/index.css */
+
+/* General body styling */
+body {
+  background-color: #f8f9fa; /* Light background color */
+  color: #333; /* Dark text color for better contrast */
+  font-family: Arial, sans-serif; /* Set a basic font */
+}
+
+/* Header styling */
+/* Header styling with a fading background image */
+header {
+  position: relative; /* Position for the pseudo-element */
+  overflow: hidden; /* Hide any overflow */
+  color: white; /* White text */
+  padding: 20px 0; /* Vertical padding */
+}
+
+/* Pseudo-element for the fade effect */
+header::before {
+  content: ""; /* Required for pseudo-elements */
+  position: absolute; /* Position absolutely */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0; /* Cover the entire header */
+  background-image: url("https://c7.alamy.com/comp/EY0A3Y/big-flag-background-made-of-world-country-flags-vector-EY0A3Y.jpg"); /* Background image */
+  background-repeat: no-repeat; /* No repeat */
+  background-size: cover; /* Cover the entire area */
+  opacity: 0.6; /* Set the opacity for fade effect */
+  z-index: 1; /* Place it behind the text */
+}
+
+h1, p {
+  position: relative; /* Positioning for the text */
+  z-index: 2; /* Ensure the text appears above the pseudo-element */
+}
+
+
+h1 {
+  margin: 0; /* Remove default margin */
+}
+
+p {
+  margin: 5px 0; /* Slight margin for paragraphs */
+}
+
+/* Footer styling */
+footer {
+  background-color: #343a40; /* Dark background for footer */
+  color: white; /* White text */
+  padding: 10px 0; /* Vertical padding */
+}
+
+/* Advisory Card styles */
+.card {
+  border-radius: 15px; /* Rounded corners */
+  transition: transform 0.2s; /* Smooth transition for hover effect */
+}
+
+.card:hover {
+  transform: scale(1.05); /* Scale up the card on hover */
+}
+
+.card-img-top {
+  border-top-left-radius: 15px; /* Rounded corners for the image */
+  border-top-right-radius: 15px; /* Rounded corners for the image */
+}
+
+/* Responsive layout */
+.container {
+  margin-top: 20px; /* Margin at the top of the container */
+}
+
+/* Filter input styling */
+input[type="text"] {
+  border-radius: 20px; /* Rounded corners for the input */
+  border: 1px solid #ced4da; /* Border color */
+  padding: 10px 20px; /* Padding inside the input */
+}
+
+input[type="text"]:focus {
+  border-color: #007bff; /* Change border color on focus */
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Add shadow on focus */
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+  .card {
+      margin-bottom: 20px; /* Spacing between cards on smaller screens */
+  }
+
+  input[type="text"] {
+      margin-bottom: 20px; /* Spacing below the input on smaller screens */
+  }
+}
+
+@media (min-width: 768px) {
+  .row {
+      margin-left: 0; /* Remove margin on larger screens */
+      margin-right: 0; /* Remove margin on larger screens */
+  }
+}
